@@ -1,0 +1,38 @@
+{%extends "base.html"%}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+{% endblock %}
+
+{%block title%} Koobytes {% endblock %}'
+
+{% block content %}
+<div class="post-title">
+    <h1>Welcome to Koobytes!</h1>
+</div>
+<div class="post-body">
+    Thank you for visiting my page! With over 13 years of experience in healthcare and health tech, I’m excited to be pivoting into the world of tech as a Full Stack Developer and Cybersecurity professional. I’ve recently completed the Boot.dev Backend Developer course and a six-month Cybersecurity bootcamp with Ohio State University, equipping me with the skills to tackle modern challenges in both fields. I'm currently on track to finish my Security+ and Network+ certifications shortly. Be sure to explore my GitHub and blog, where I share detailed guides and insights on all things tech. Plus, stay tuned—my YouTube channel is launching soon for even more in-depth content.
+</div>
+
+<div class="recent-posts">
+    <div class="post-title">
+        <h2>Most recent blog posts</h2>
+    </div>
+    {% if recent_posts %}
+        <ul class="recent-posts-list">
+            {% for post in recent_posts %}
+                <li class="recent-post-item">
+                    <h3>{{ post.title }}</h3>
+                    <small>Posted on {{ post.created.strftime('%Y-%m-%d') }}</small>
+                    <a href="{{ url_for('posts.post_detail', slug=post.slug) }}" class="btn btn-primary">Read More</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No recent posts available.</p>
+    {% endif %}
+</div>
+
+{% endblock %}
+
+

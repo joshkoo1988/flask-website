@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+{% endblock %}
+
+{% block title %}
+    Timeline
+{% endblock %}
+
+{% block content %}
+<div class = timeline_title>
+    <h1>Learning Timeline</h1>
+</div>
+<div class="timeline_container">
+    <div class="vertical-line"> </div>
+        {% for event in timeline_events %}
+            <div class = timeline_body>
+                <div class="date">{{ event.date.strftime('%B %d, %Y') }}</div>
+                <div class="title">{{ event.event }}</div>
+            </div>
+        {% endfor %}
+        </div>
+</div>
+{% endblock %}

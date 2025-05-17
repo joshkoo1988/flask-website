@@ -1,0 +1,36 @@
+{%extends "base.html"%}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+{% endblock %}
+
+{%block title%}
+About Me
+{% endblock %}
+
+
+{% block content %}
+    <div class="aboutme-page">
+        <header>
+            <h1 class="aboutme-title">whoami</h1>
+        </header>
+        <div class="container">
+            <div class="left-column">
+                <div class="image-container">
+                    <img src="{{ url_for('static', filename='self.jpg') }}" alt="My Picture" class="responsive-img">
+                </div>
+                <div class ="resume-btn">
+                    <a href="{{ url_for('static', filename='joshua_koo_resume.pdf') }}" class="download-btn" download>Download Resume</a>
+                </div>
+            </div>
+            <div class="right-column">
+                <div class="aboutme-body">
+                    <p>Hi! I’m Joshua Koo, a tech professional based in Powell, Ohio.</p>
+                    <p>Certifications :<br>Security +(in progress)<br>Network+(in progress)<br>OSU Cybersecurity Bootcamp completion Certificate<br>Boot.Dev completion Certificate</p>
+                    <p>Programming Skills :<br>Python<br>C++<br>C#<br>GoLang<br>SQL<br>HTML</p>
+                    <p>CyberSecurity Skills :<br>Penetration Testing<br>Incident Response<br>Security Operations<br>Security Awareness Training</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

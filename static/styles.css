@@ -1,0 +1,208 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(124, 121, 146);
+    background-image: url('wallpaper.jpg');
+    background-size: cover; 
+    background-repeat: repeat; 
+    background-attachment: fixed;
+    color: rgb(255, 255, 255);  
+    font-family: Arial, sans-serif;  
+    line-height: 1.6; 
+    margin: 0; 
+    padding: 0;
+    z-index: -1;
+}
+
+/* Add styles for posts */
+.post-title {
+    background-color: rgba(52, 58, 64, 0.8); 
+    color: rgb(255, 255, 255); 
+    padding: 20px; 
+    display: inline-block; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 10px; 
+}
+
+.post-body {
+    background-color: rgba(52, 58, 64, 0.8); 
+    color: rgb(255, 255, 255); 
+    padding: 20px; 
+    margin: 20px 0; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Add styles for card */
+.card {
+    background-color: rgba(52, 58, 64, 0.8); 
+    color: rgb(255, 255, 255); 
+    border: none; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px; 
+}
+
+.btn-custom {
+    background-color: #4CAF50; 
+    border: none; 
+    color: white; 
+    padding: 15px 32px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    margin: 4px 2px; 
+    cursor: pointer; 
+    border-radius: 4px; 
+}
+
+/* about me styles */
+/* Scoped Styles for About Me Page */
+
+.aboutme-page .aboutme-title {
+    background-color: rgba(52, 58, 64, 0.8); 
+    color: rgb(255, 255, 255); 
+    padding: 20px; 
+    display: inline-block; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 10px; 
+}
+
+.aboutme-page .container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.aboutme-page .left-column {
+    flex: 1;
+    text-align: center;
+}
+
+.aboutme-page .right-column {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.aboutme-page .aboutme-body {
+    background-color: rgba(52, 58, 64, 0.8); /* Dark background */
+    color: rgb(255, 255, 255); /* White text color */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.aboutme-page .image-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.aboutme-page .responsive-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto; 
+    transition: all 0.3s ease;
+    display: block; 
+}
+
+.download-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; 
+    text-align: center;
+}
+
+.download-btn:hover {
+    background-color: #0056b3;
+}
+
+.resume-btn {
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+.recent-posts-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+
+.recent-post-item {
+    flex: 1 1 calc(33.333% - 20px); /* 3 columns */
+    margin: 10px;
+    box-sizing: border-box;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(52, 58, 64, 0.8);
+}
+
+.recent-post-item h3 {
+    margin-top: 0;
+}
+
+.timeline_title {
+    background-color: rgba(52, 58, 64, 0.8); 
+    color: rgb(255, 255, 255); 
+    padding: 20px; 
+    margin: 20px 0; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+}
+
+.timeline_container {
+    position: relative;
+    padding: 20px;
+    height: 100%;
+}
+
+.timeline_body {
+    background-color: rgba(52, 58, 64, 0.8); 
+    color: rgb(255, 255, 255); 
+    padding: 10px; /* Adjust padding as needed */
+    margin: 10px 0; /* Adjust margin as needed */
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    position: relative;
+    display: inline-block; /* Ensure the background wraps around the content */
+    width: 45%; /* Adjust width as needed */
+    text-align: center;
+}
+
+.timeline_body:nth-child(odd) {
+    float: left;
+    clear: both;
+}
+
+.timeline_body:nth-child(even) {
+    float: right;
+    clear: both;
+}
+
+.vertical-line {
+    border-left: 4px solid #000000; 
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
